@@ -7,68 +7,21 @@ import React from 'react';
  * @param {'default'|'light'} variant - 'light' for use on dark backgrounds (footer)
  */
 export default function Logo({ size = 'default', variant = 'default', className = '' }) {
-  const heights = { small: 24, default: 32, large: 44 };
-  const h = heights[size] || heights.default;
-  const scale = h / 32;
-
-  /* On dark bg (default for new theme), text is white. 'light' variant is also white. */
-  const textColor = '#FFFFFF';
-  const accentColor = '#c41e3a';
-
   return (
-    <a href="/" className={`logo-link ${className}`} aria-label="Food Tailor — Home">
-      <svg
-        width={Math.round(200 * scale)}
-        height={h}
-        viewBox="0 0 200 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        role="img"
+    <a href="/" className={`logo-link ${className}`} aria-label="Food Tailor — Home" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+      <span
+        style={{
+          fontFamily: "'Montserrat', 'Open Sans', sans-serif",
+          fontSize: size === 'large' ? '1.8rem' : size === 'small' ? '1.15rem' : '1.45rem',
+          fontWeight: 900,
+          letterSpacing: '0.12em',
+          color: '#FFFFFF',
+          lineHeight: 1,
+          textTransform: 'uppercase',
+        }}
       >
-        {/* "F" */}
-        <text
-          x="0" y="25"
-          fontFamily="'Playfair Display', Georgia, serif"
-          fontWeight="800"
-          fontSize="26"
-          fill={textColor}
-          letterSpacing="-0.5"
-        >F</text>
-
-        {/* Infinity symbol for "OO" — positioned where the two O's would be */}
-        <g transform="translate(14.5, 4.5)">
-          <path
-            d="M9.5 11.5C7.2 11.5 5 9.8 5 7.5C5 5.2 7 3.5 9.5 3.5C11.2 3.5 12.7 4.4 13.5 5.8C14.3 4.4 15.8 3.5 17.5 3.5C20 3.5 22 5.2 22 7.5C22 9.8 19.8 11.5 17.5 11.5C15.8 11.5 14.3 10.6 13.5 9.2C12.7 10.6 11.2 11.5 9.5 11.5Z"
-            stroke={accentColor}
-            strokeWidth="2.2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-            transform="scale(1.15) translate(-2, 2)"
-          />
-        </g>
-
-        {/* "D" */}
-        <text
-          x="46" y="25"
-          fontFamily="'Playfair Display', Georgia, serif"
-          fontWeight="800"
-          fontSize="26"
-          fill={textColor}
-          letterSpacing="-0.5"
-        >D</text>
-
-        {/* "TAILOR" — lighter weight for hierarchy */}
-        <text
-          x="72" y="25"
-          fontFamily="'Playfair Display', Georgia, serif"
-          fontWeight="400"
-          fontSize="26"
-          fill={textColor}
-          letterSpacing="1.5"
-        >TAILOR</text>
-      </svg>
+        FOOD TAILÖR
+      </span>
     </a>
   );
 }

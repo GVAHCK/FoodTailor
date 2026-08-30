@@ -12,50 +12,51 @@ export default function HeroSection() {
 
   return (
     <section className="gastro-hero" id="hero">
-      {/* 1. SINGLE FULL-BLEED CINEMATIC PHOTOGRAPH */}
+      {/* 1. KEN BURNS SUBTLE PANNING & ZOOMING BACKDROP */}
       <div className="gastro-hero__bg">
         <img
           src={heroBg}
           alt="Artisanal Hyderabadi culinary feast with aromatic dum biryani, charred kebabs, and traditional sides"
+          className="gastro-hero__bg-img"
         />
         <div className="gastro-hero__overlay" />
       </div>
 
-      {/* 2. CENTERED EDITORIAL POSTER CONTENT (NO FOREGROUND DISH / NO CIRCLE) */}
+      {/* 2. STAGGERED EDITORIAL POSTER CONTENT */}
       <div className="container gastro-hero__container">
         <div className="gastro-hero__content">
           <motion.h1
             className="gastro-hero__title"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 1.08 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
           >
-            FOOD TAIL<span className="gastro-hero__umlaut">Ö</span>R
+            FOOD TAILÖR
           </motion.h1>
 
           <motion.p
             className="gastro-hero__tagline"
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             From your favorite brands to your special moments.
           </motion.p>
 
           <motion.div
             className="gastro-hero__action"
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
             <Link to="/menu-builder" className="gastro-hero__btn">
-              • START YOUR MENU •
+              <span className="gastro-hero__btn-text">• START YOUR MENU •</span>
             </Link>
           </motion.div>
         </div>
       </div>
 
-      {/* 3. SCROLL DOWN INDICATOR */}
+      {/* 3. FLOATING BOUNCING SCROLL INDICATOR */}
       <button
         className="gastro-hero__scroll"
         onClick={scrollToContent}

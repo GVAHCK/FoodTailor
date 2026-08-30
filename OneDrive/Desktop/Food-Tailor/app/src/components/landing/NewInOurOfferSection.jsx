@@ -64,10 +64,10 @@ export default function NewInOurOfferSection() {
             <motion.div
               key={item.title}
               className="ed-offer__item"
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.07 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="ed-offer__icon-box">
                 {item.icon}

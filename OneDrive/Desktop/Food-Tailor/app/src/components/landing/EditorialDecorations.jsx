@@ -142,8 +142,8 @@ export function ForkKnifeIllustration({ className = '', color = '#FFFFFF' }) {
  */
 export function BonAppetitBadge({ className = '' }) {
   return (
-    <div className={`bon-appetit-badge ${className}`} aria-hidden="true">
-      <svg width="180" height="100" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className={`bon-appetit-badge ${className}`} aria-hidden="true" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+      <svg width="180" height="100" viewBox="0 0 220 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '100%', height: 'auto' }}>
         {/* Radiating sunburst dots & lines */}
         <g stroke="#B91C1C" strokeWidth="2" strokeLinecap="round" opacity="0.85">
           <line x1="110" y1="10" x2="110" y2="20" />
@@ -164,10 +164,9 @@ export function BonAppetitBadge({ className = '' }) {
           y="65"
           textAnchor="middle"
           fill="#B91C1C"
-          fontFamily="'Caveat', cursive, serif"
-          fontSize="46"
-          fontWeight="700"
-          fontStyle="italic"
+          fontFamily="'Reenie Beanie', cursive, serif"
+          fontSize="54"
+          fontWeight="400"
         >
           Bon
         </text>
@@ -176,10 +175,9 @@ export function BonAppetitBadge({ className = '' }) {
           y="105"
           textAnchor="middle"
           fill="#B91C1C"
-          fontFamily="'Caveat', cursive, serif"
-          fontSize="48"
-          fontWeight="700"
-          fontStyle="italic"
+          fontFamily="'Reenie Beanie', cursive, serif"
+          fontSize="56"
+          fontWeight="400"
         >
           Appétit
         </text>
@@ -193,8 +191,8 @@ export function BonAppetitBadge({ className = '' }) {
  */
 export function FoodSketchHeader({ label = 'FEAST', className = '' }) {
   return (
-    <div className={`food-sketch-header ${className}`} aria-hidden="true">
-      <svg width="150" height="75" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className={`food-sketch-header ${className}`} aria-hidden="true" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+      <svg width="150" height="75" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '100%', height: 'auto' }}>
         {/* Hand-drawn bun/dish */}
         <path
           d="M30,45 C30,20 130,20 130,45 Z"
@@ -243,8 +241,8 @@ export function FoodSketchHeader({ label = 'FEAST', className = '' }) {
  */
 export function RedPriceBadge({ price = '₹250', className = '' }) {
   return (
-    <div className={`red-price-badge ${className}`} aria-hidden="true">
-      <svg width="60" height="60" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className={`red-price-badge ${className}`} aria-hidden="true" style={{ display: 'inline-flex' }}>
+      <svg width="60" height="60" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '100%', height: 'auto' }}>
         <circle cx="35" cy="35" r="30" fill="#B91C1C" />
         <circle cx="35" cy="35" r="33" stroke="#B91C1C" strokeWidth="1.5" strokeDasharray="3 3" />
         <text
@@ -252,9 +250,9 @@ export function RedPriceBadge({ price = '₹250', className = '' }) {
           y="43"
           textAnchor="middle"
           fill="#FFFFFF"
-          fontFamily="'Caveat', cursive, serif"
-          fontSize="22"
-          fontWeight="700"
+          fontFamily="'Reenie Beanie', cursive, serif"
+          fontSize="24"
+          fontWeight="400"
         >
           {price}
         </text>
@@ -378,9 +376,9 @@ export function BrewFeastBadge({ word = 'Feast', className = '' }) {
         style={{
           position: 'relative',
           zIndex: 2,
-          fontFamily: "'Caveat', cursive, serif",
-          fontSize: '3.4rem',
-          fontWeight: '700',
+          fontFamily: "'Reenie Beanie', cursive, serif",
+          fontSize: '3.6rem',
+          fontWeight: '400',
           color: '#151515',
           display: 'block',
           transform: 'rotate(-6deg)',

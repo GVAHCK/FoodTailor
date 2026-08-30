@@ -32,8 +32,6 @@ const recommendedItems = [
 export default function RecommendedTodaySection() {
   return (
     <section className="ed-rec" id="recommended">
-      <TornEdgeTop color="#F7F3EE" />
-
       <div className="container ed-rec__container">
         {/* Section Header */}
         <div className="ed-rec__header">

@@ -15,8 +15,6 @@ export default function NewsletterSection() {
 
   return (
     <section className="ed-news" id="newsletter">
-      <TornEdgeTop color="#F7F3EE" />
-
       <div className="container ed-news__container">
         {/* Hand-drawn Artisanal Teapot Kettle Illustration */}
         <motion.div

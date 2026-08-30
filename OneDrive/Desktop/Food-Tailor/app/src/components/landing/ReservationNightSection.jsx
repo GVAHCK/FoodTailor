@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle2, X } from 'lucide-react';
 import restaurantNight from '../../assets/restaurant-night.jpg';
 
 export default function ReservationNightSection() {
@@ -11,10 +12,22 @@ export default function ReservationNightSection() {
     guests: '20-50 Guests',
     date: '',
   });
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/menu-builder');
+    if (!formData.name.trim() || !formData.phone.trim()) return;
+    setIsSuccess(true);
+  };
+
+  const handleProceedToBuilder = () => {
+    navigate('/menu-builder', {
+      state: {
+        guestCount: formData.guests,
+        date: formData.date,
+        name: formData.name,
+      },
+    });
   };
 
   return (
@@ -115,6 +128,56 @@ export default function ReservationNightSection() {
           </div>
         </motion.form>
       </div>
+
+      {/* Interactive Reservation Confirmation Modal */}
+      <AnimatePresence>
+        {isSuccess && (
+          <div className="ed-res-modal-overlay" onClick={() => setIsSuccess(false)}>
+            <motion.div
+              className="ed-res-modal"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                className="ed-res-modal__close"
+                onClick={() => setIsSuccess(false)}
+                aria-label="Close modal"
+              >
+                <X size={20} />
+              </button>
+
+              <div className="ed-res-modal__icon">
+                <CheckCircle2 size={48} color="#c41e3a" />
+              </div>
+
+              <h3 className="ed-res-modal__title">Reservation Request Received</h3>
+              <p className="ed-res-modal__text">
+                Thank you, <strong style={{ color: '#FFFFFF' }}>{formData.name}</strong>! Our culinary concierge will call you at <strong style={{ color: '#FFFFFF' }}>{formData.phone}</strong> within 15 minutes to curate your multi-brand banquet for {formData.guests}.
+              </p>
+
+              <div className="ed-res-modal__actions">
+                <button
+                  type="button"
+                  className="ed-btn ed-btn--crimson"
+                  onClick={handleProceedToBuilder}
+                >
+                  CUSTOMIZE DISHES NOW
+                </button>
+                <button
+                  type="button"
+                  className="ed-btn ed-btn--outline"
+                  onClick={() => setIsSuccess(false)}
+                >
+                  CONTINUE BROWSING
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

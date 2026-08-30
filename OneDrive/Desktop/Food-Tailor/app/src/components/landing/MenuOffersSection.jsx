@@ -79,8 +79,6 @@ const dessertItems = [
 export default function MenuOffersSection() {
   return (
     <section className="ed-menu-offers" id="menu-offers">
-      <TornEdgeTop color="#F7F3EE" />
-
       <div className="container ed-menu-offers__container">
         {/* Bon Appétit Radiating Red Stamp */}
         <motion.div
@@ -121,6 +119,7 @@ export default function MenuOffersSection() {
                 <div className="ed-menu-offers__dish-info">
                   <div className="ed-menu-offers__dish-header">
                     <h3 className="ed-menu-offers__dish-name">{item.name}</h3>
+                    <span className="ed-menu-offers__dish-dots"></span>
                     <span className="ed-menu-offers__dish-price">{item.price}</span>
                   </div>
                   <p className="ed-menu-offers__dish-brand">{item.brand}</p>
@@ -151,6 +150,7 @@ export default function MenuOffersSection() {
                 <div className="ed-menu-offers__dish-info">
                   <div className="ed-menu-offers__dish-header">
                     <h3 className="ed-menu-offers__dish-name">{item.name}</h3>
+                    <span className="ed-menu-offers__dish-dots"></span>
                     <span className="ed-menu-offers__dish-price">{item.price}</span>
                   </div>
                   <p className="ed-menu-offers__dish-brand">{item.brand}</p>
@@ -161,8 +161,6 @@ export default function MenuOffersSection() {
           </div>
         </div>
       </div>
-
-      <TornEdgeBottom color="#F7F3EE" />
     </section>
   );
 }

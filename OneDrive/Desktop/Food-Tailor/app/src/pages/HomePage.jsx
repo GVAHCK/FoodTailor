@@ -6,6 +6,7 @@ import CraftStorySection from '../components/landing/CraftStorySection';
 import CollageVibeSection from '../components/landing/CollageVibeSection';
 import CuratedMomentsSection from '../components/landing/CuratedMomentsSection';
 import MenuOffersSection from '../components/landing/MenuOffersSection';
+import RecommendedTodaySection from '../components/landing/RecommendedTodaySection';
 import ReservationNightSection from '../components/landing/ReservationNightSection';
 import TriplePhotoStrip from '../components/landing/TriplePhotoStrip';
 import MomentsGallerySection from '../components/landing/MomentsGallerySection';
@@ -19,7 +20,7 @@ import { FoodArtDivider } from '../components/landing/EditorialDecorations';
 export default function HomePage() {
   return (
     <div className="editorial-landing">
-      {/* 1. Liquid Glass Luxury Editorial Navigation */}
+      {/* 1. Liquid Glass Luxury Editorial Navigation & Gastrobar Top Bar */}
       <LandingNav />
 
       {/* 2. Cinematic Hero Section */}
@@ -43,31 +44,34 @@ export default function HomePage() {
       {/* 7. Curated Signature Dishes & Desserts (Bon Appétit Badge, Niloufer, Shadab, Almond House) */}
       <MenuOffersSection />
 
-      {/* 8. Plan Your Celebration (Warm glowing evening ambience, 4-column planner form) */}
+      {/* 8. Recommended Today — 3-Column Dish/Drink Showcase with Circular Frames & Red Price Badges */}
+      <RecommendedTodaySection />
+
+      {/* 9. Plan Your Celebration (Warm glowing evening ambience, 4-column planner form) */}
       <ReservationNightSection />
 
       {/* Subtle Food Art Divider */}
       <FoodArtDivider icon="chai" label="AUTHENTIC DELIGHTS" />
 
-      {/* 9. Triple Photo Strip Band */}
+      {/* 10. Triple Photo Strip Band */}
       <TriplePhotoStrip />
 
-      {/* 10. Moments We Create (Editorial Asymmetrical Food & Banquet Mosaic) */}
+      {/* 11. Moments We Create (Editorial Asymmetrical Food & Banquet Mosaic) */}
       <MomentsGallerySection />
 
-      {/* 11. New In Our Offer (Curated Tasting Experience & Multi-Brand Service Features) */}
+      {/* 12. New In Our Offer (Curated Tasting Experience & Multi-Brand Service Features) */}
       <NewInOurOfferSection />
 
-      {/* 12. Festive Gigs Banner */}
+      {/* 13. Festive Gigs Banner */}
       <FestiveGigsSection />
 
-      {/* 13. Testimonial Story (GastroBar Reference Review Carousel with Botanical Linework) */}
+      {/* 14. Testimonial Story (GastroBar Reference Review Carousel with Botanical Linework) */}
       <TestimonialStorySection />
 
-      {/* 14. Newsletter / Private Tasting Updates (Cream Paper & Air-mail Vector) */}
+      {/* 15. Newsletter / Private Tasting Updates (Cream Paper & Air-mail Vector) */}
       <NewsletterSection />
 
-      {/* 15. Complete 4-Column Editorial Footer */}
+      {/* 16. Complete 4-Column Editorial Footer */}
       <EditorialFooter />
     </div>
   );

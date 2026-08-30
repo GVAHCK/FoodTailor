@@ -124,8 +124,6 @@ export default function BookOccasionSection() {
           </motion.div>
         </div>
       </div>
-
-      <TornEdgeBottom color="#F7F3EE" />
     </section>
   );
 }

@@ -4,8 +4,8 @@ import CTABand from '../components/CTABand';
 
 export default function BrandsPage() {
   return (
-    <div style={{ paddingTop: 'var(--nav-height)' }}>
-      <BrandShowcase showHeader={true} />
+    <div className="brands-page-wrapper">
+      <BrandShowcase showHeader={true} isFullPage={true} />
       <CTABand />
     </div>
   );

@@ -7,8 +7,6 @@ import kebabsImg from '../../assets/kebabs.jpg';
 export default function CraftStorySection() {
   return (
     <section className="ed-craft" id="craft-story">
-      <TornEdgeTop color="#F7F3EE" />
-
       <div className="container ed-craft__container">
         <div className="ed-craft__grid">
           {/* Left Column: Cropped Food Photo with Shadow */}

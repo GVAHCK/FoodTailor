@@ -164,8 +164,6 @@ export default function CuratedMomentsSection() {
           </motion.div>
         </div>
       </div>
-
-      <TornEdgeBottom color="#F7F3EE" />
     </section>
   );
 }
